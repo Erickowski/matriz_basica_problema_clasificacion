@@ -1,0 +1,6 @@
+iPhone,IOS,3,13,6,3000
+Huawei,Android,4,20,8,3800
+Samsung,Android,6,32,8,4500
+Huawei,Android,3,8,6,3000
+Motorola,Android,2,8,6,4000
+Samsung,Android,3,13,6,3600

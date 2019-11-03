@@ -1,0 +1,114 @@
+<!--HECHO POR: Erick Daniel Pérez Mata ISC F-94-->
+<!--"Believe in yourself"-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italianno|Lato:400,700,900|Raleway:400,700,900">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Temas Selectos de Sistemas</title>
+</head>
+<body>
+    <header class="encabezado mb-4">
+        <div class="container">
+            <a href="index.html">
+                <h1>Elaboracion de una matriz básica para un problema de clasificación</h1>
+            </a>
+        </div>
+    </header>
+    <div class="simulacion container">
+        <h2>Simular celulares.txt</h2>
+        <input id="simularCV" type="submit" class="btn btn-secondary mb-2" value="Simular Clases y Variables">
+        <input id="simularT" type="submit" class="btn btn-secondary mb-2" value="Simular Tipo">
+        <input id="simularV" type="submit" class="btn btn-secondary mb-2" value="Simular Valores">
+        <input id="simularC" type="submit" class="btn btn-secondary mb-2" value="Simular Criterios">
+        <input id="simularCO" type="submit" class="btn btn-secondary mb-2" value="Simular Conjuntos">
+        <input id="simularVC" type="submit" class="btn btn-secondary mb-2" value="Simular Valores de Conjuntos">
+        <input id="simularCOB" type="submit" class="btn btn-secondary mb-2" value="Simular Clases de objetos">
+        <h2>Simular deportistas.txt</h2>
+        <input id="DsimularCV" type="submit" class="btn btn-secondary mb-2" value="Simular Clases y Variables">
+        <input id="DsimularT" type="submit" class="btn btn-secondary mb-2" value="Simular Tipo">
+        <input id="DsimularV" type="submit" class="btn btn-secondary mb-2" value="Simular Valores">
+        <input id="DsimularC" type="submit" class="btn btn-secondary mb-2" value="Simular Criterios">
+        <input id="DsimularCO" type="submit" class="btn btn-secondary mb-2" value="Simular Conjuntos">
+        <input id="DsimularVC" type="submit" class="btn btn-secondary mb-2" value="Simular Valores de Conjuntos">
+        <input id="DsimularCOB" type="submit" class="btn btn-secondary mb-2" value="Simular Clases de objetos">
+    </div>
+    
+    <div class="container variables">
+        <h2>Define el numero de clases y variables</h2>
+        <form class="form">
+            <p>Selecciona numero de clases: 
+                <input id="clases" type="number" name="clases" value="1" min="1" step="1">                 
+            </p>
+            <p>Selecciona numero de variables: 
+                <input id="variables" type="number" name="variables" value="1" min="1" step="1"> 
+                <input id="crearVariables" type="submit" class="btn btn-secondary" value="Crear"> 
+            </p>
+        </form>
+    </div>
+    
+    <div class="container tipos" id="tipos">
+        <h2>Define los tipos de tus variables</h2>
+        <form class="form" id="formularioTipos">
+            <input id="defTipos" type="submit" class="btn btn-secondary" value="Continuar"> 
+        </form>
+    </div>
+    
+    <div class="container conjuntos" id="conjuntos">
+        <h2>Define el conjunto de valores admisibles</h2>
+        <p>Separando por ',' cada valor, sin espacios</p>
+        <form id="formularioConjuntos">
+            <input id="defVar" type="submit" class="btn btn-secondary" value="Continuar"> 
+        </form>
+
+    </div>
+    
+    <div class="container criterios" id="criterios">
+        <h2>Elige tus criterios de comparacion</h2>
+        <form id="formularioCriterios">
+            <input id="defCri" type="submit" class="btn btn-secondary" value="Continuar"> 
+        </form>
+        <form id="formularioCriteriosAsignacion">
+            <input id="defCriAsi" type="submit" class="btn btn-secondary" value="Continuar"> 
+        </form>
+        <form id="formularioCriteriosConInUm">
+            <input id="defCriConInUm" type="submit" class="btn btn-secondary" value="Continuar"> 
+        </form>
+    </div>
+
+    <div class="container muestras" id="muestras">
+        <h2>Sube tu archivo de muestras de cada clase</h2>
+        <p>Separando por ',' cada rasgo</p>
+        <form id="formularioMuestras">
+            <input class="mb-4" type="file" name="file" id="file">
+            
+            <input id="defMue" type="submit" class="btn btn-secondary" value="Continuar"> 
+        </form>
+    </div>
+
+    <div class="container matrices" id="matrices">
+        <h2>Construye y muestra la matriz de diferencia y basica</h2>
+        <input id="construirME" type="submit" class="btn btn-secondary mb-2" value="Construir ME">
+        <div class="" id="matrizEntrenamiento">
+            
+        </div>
+        <input id="construirMD" type="submit" class="btn btn-secondary mb-2" value="Construir MD">
+        <div class="" id="matrizDiferencia">
+            
+        </div>
+        <input id="construirMB" type="submit" class="btn btn-secondary mb-2" value="Construir MB">
+        <div class="" id="matrizBasica">
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+</html>
